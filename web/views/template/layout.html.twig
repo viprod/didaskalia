@@ -1,0 +1,20 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    {% block head %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../css/materialize.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+     { % include 'navbar.twig' % }
+    <div class="container" id="content">
+        {% block content %}{% endblock %}
+    </div>
+     { % include 'footer.twig' % }
+</body>
+</html>
