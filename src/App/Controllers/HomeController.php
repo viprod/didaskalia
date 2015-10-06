@@ -21,6 +21,9 @@ class HomeController
         return $twig->render('contact.html.twig',array());
     }
 
+    public function registerAction(Twig_Environment $twig, UrlGenerator $urlgen){
+        return $twig->render('register.html.twig',array());
+    }
 
     public function loginAction(Request $req, Twig_Environment $twig, SecurityContext $sc, UrlGenerator $urlgen)
     {

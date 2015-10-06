@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse,
 
 class AdminController
 {
-    public function index(Twig_Environment $twig){
-
+    public function indexAction(Twig_Environment $twig){
+        return $twig->render('admin/dashoard.html.twig', array());
     }
 }

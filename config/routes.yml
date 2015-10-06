@@ -9,3 +9,9 @@ routes:
   test:
     pattern:  /test
     defaults: {_controller:  'TestController:indexAction' }
+  register:
+    pattern:  /register
+    defaults: {_controller:  'HomeController:registerAction' }
+  admin:
+    pattern:  /admin
+    defaults: {_controller:  'AdminController:indexAction' }
