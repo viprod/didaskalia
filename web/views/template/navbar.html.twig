@@ -1,10 +1,20 @@
-<nav class="white" role="navigation">
+
+<nav class="teal" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="#">Home</a></li>
             <li><a href="#">Quizz</a></li>
             <li><a href="#">Contact</a></li>
+            {% block content %}
+                {% if is_granted('ROLE_USER') %}
+                <li><p>Welcome {{ app.security.token.user.username }}!</p><a href="{{ path('logout') }}">Logout</a></li>
+                {% else %}
+                <li><p>You are not currently logged in</p><a href="{{ path('login') }}">Login</a></li>
+                {% endif %}
+            {% endblock %}
+
+
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
